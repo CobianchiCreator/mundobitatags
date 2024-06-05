@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag Copier</title>
+    <title>Verificação de CAPTCHA</title>
     <style>
         .tag {
             display: inline-block;
@@ -14,6 +14,10 @@
             background-color: #f9f9f9;
             cursor: pointer;
         }
+
+
+    
+
     </style>
 </head>
 <body>
@@ -52,6 +56,37 @@
             });
         }
     </script>
+
+    <div>
+      <h1>Verificação de CAPTCHA</h1>
+      <form method="POST">
+        {{ form.hidden_tag(6LfP8_EpAAAAAEnJ10d9q34jk8Ys0rvxsurTrTPc) }}
+        {{ form.recaptcha.label }}<br>
+        {{ form.recaptcha }}<br>
+        {{ form.submit }}
+      </form>
+    </div>
+
+    <div>
+        <h1>pixelpulse123</h1>
+        <form method="POST">
+          {{ form.hidden_tag() }}
+          {{ form.password.label }}<br>
+          {{ form.password }}<br>
+          {{ form.submit }}
+        </form>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+      </div>
+  
+
 
 </body>
 </html>
