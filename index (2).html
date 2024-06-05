@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Copier</title>
+    <style>
+        .tag {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tag" onclick="copyText('mundo bita')">mundo bita</div>
+    <div class="tag" onclick="copyText('brinquedo')">brinquedo</div>
+    <div class="tag" onclick="copyText('brinquedo infantil')">brinquedo infantil</div>
+    <div class="tag" onclick="copyText('presente para criança')">presente para criança</div>
+    <div class="tag" onclick="copyText('presente infantil')">presente infantil</div>
+    <div class="tag" onclick="copyText('mundo')">mundo</div>
+    <div class="tag" onclick="copyText('bita')">bita</div>
+    <div class="tag" onclick="copyText('youtuber')">youtuber</div>
+    <div class="tag" onclick="copyText('youtube')">youtube</div>
+    <div class="tag" onclick="copyText('brinquedo mundo bita')">brinquedo mundo bita</div>
+    <div class="tag" onclick="copyText('brinqedo')">brinqedo</div>
+    <div class="tag" onclick="copyText('produtos infantis')">produtos infantis</div>
+    <div class="tag" onclick="copyText('brinquedo educativo infantil')">brinquedo educativo infantil</div>
+    <div class="tag" onclick="copyText('brinquedo para crianças pequenas')">brinquedo para crianças pequenas</div>
+    <div class="tag" onclick="copyText('brinquedo criança de 1 ano')">brinquedo criança de 1 ano</div>
+    <div class="tag" onclick="copyText('brinquedo para criança de 2 anos')">brinquedo para criança de 2 anos</div>
+    <div class="tag" onclick="copyText('brinquedo criança 3 anos')">brinquedo criança 3 anos</div>
+    <div class="tag" onclick="copyText('4 anos')">4 anos</div>
+    <div class="tag" onclick="copyText('brinquedo criança 5 anos')">brinquedo criança 5 anos</div>
+    <div class="tag" onclick="copyText('youtube merchandise')">youtube merchandise</div>
+    <div class="tag" onclick="copyText('juguete infantil')">juguete infantil</div>
+    <div class="tag" onclick="copyText('juego')">juego</div>
+    <div class="tag" onclick="copyText('jugeuito')">jugeuito</div>
+    <div class="tag" onclick="copyText('juguete youtube')">juguete youtube</div>
+
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Copied: ' + text);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
